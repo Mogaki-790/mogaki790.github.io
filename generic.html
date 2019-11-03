@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Portfolio: Projects</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="generic.html">Projects</a></li>
+							<li><a href="elements.html">Skills and Qualifications</a></li>
+						</ul>
+						<ul class="icons">
+						<li><a href="https://www.linkedin.com/in/onalerona-mogaki-902857113/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/Mogaki-790/code_and_projects"target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h3 id="cohort">Cohort<br />
+									Analysis</h3>
+								</header>
+								<div class="image main"><img src="images/cohort02.png" alt="" /></div>
+								<p>I was recently tasked with creating a cohort analysis on a group of retailers to monitor their customer credit behaviour. The goal of the analysis was to identify the first instance in which customers had gone 3 or more months without making payments on their accounts and at which point in time this happened. We wanted to see if there would be trends and patterns in our analysis. We based our analysis on a 24 month period to get the most accurate results.</p>
+								<h3>Code Snippet: <u>SQL</u></h3>
+                                <pre><code>SELECT
+subscriberGroup,
+AltSubsGroupName,
+AppStream,
+Industry_new,
+CalYearQuarter,
+FirstArrears,
+NumberFirstArrears,
+SUM(NumberFirstArrears) OVER(PARTITION BY AltSubsGroupName,CalYearQuarter ORDER BY AltSubsGroupName,CalYearQuarter,CAST(FirstArrears AS INT)) AS CumArrears
+
+INTO QuarterlyCumArrears
+FROM QuarterlyNumFirstArrears
+
+ORDER BY AltSubsGroupName,CalYearQuarter,CAST(FirstArrears AS INT)
+                                </code></pre>
+                                <hr />
+                                <header class="major">
+									<h3 id ="qlik">Qlik Sense<br />
+									Reporting</h3>
+								</header>
+								<div class="image main"><img src="images/qlik02.png" alt="" /></div>
+								<p>While consulting at a client, I was handed the opportunity to develop a POC on automating the daily manual reporting being done. Having gained some experience in creating dashboards using Qlik Sense, I decided to use the tool along with some sample datasets to try and replicate the excel reports. I successfully replicated the reports, managing to use the most appropriate visualizations to highlight key metrics and KPIs. Management was pleased with my work and went ahead with making arrangements to purchase the licensing for Qlik Sense Enterprise and setting up an automated reporting environment.</p>
+								<h3>Code Snippet: <u>BNF</u></h3>
+                                <pre><code>SET TT_passed = SUM({<[Test Cycle-Work Stream]={'Time Travel'}>}{<Description={'Passed'}>}[TC Count-Defects Raised]);
+SET TT_blocked = SUM({<[Test Cycle-Work Stream]={'Time Travel'}>}{<Description={'Blocked'}>}[TC Count-Defects Raised]);
+COUNT({<[Test Cycle-Work Stream]={'CR'}>}Description)
+                                </code></pre>
+                                <hr />
+                                <header class="major">
+									<h3 id ="imed">Intermediary<br />
+									Checking Tool</h3>
+								</header>
+								<div class="image main"><img src="images/imed02.jpg" alt="" /></div>
+								<p>During my time as a consultant, I worked with my team lead on a project that involved developing a tool for the Test Data Management team. The purpose of the tool was to validate intermediary data across various web services. I developed a UI for the tool using c# as this was the language of preference for the project. My team lead was able to assist me with the back-end coding of the tool. </p>
+                                <hr />
+                                <header class="major">
+									<h3 id ="inventory">Inventory<br />
+									Management System</h3>
+								</header>
+								<div class="image main"><img src="images/inventory02.png" alt="" /></div>
+								<p>In my final year of studies I was tasked with a software development project. We worked in groups and were instructed to develop an app of our own choosing for any small business. My group decided on creating an inventory management system for a local supplement and sports nutrition store known as Training Elite. As team lead my work included managing the project, creating the database for our tool and assisting in the UI design. The purpose of our tool was to assist the store owners in keeping record of their stock and also keeping track of special orders made by customers.</p>
+							</section>
+
+					</div>
+             
+				<!-- Footer -->
+					<footer id="footer">
+							<section>
+								<h3>Phone</h3>
+								<p><a href="tel:0795560813">(079) 556-0813</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#footer">mogakio@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://www.linkedin.com/in/onalerona-mogaki-902857113/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://github.com/Mogaki-790/code_and_projects"target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
